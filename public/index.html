@@ -3,37 +3,29 @@
 <html>
 
 	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
+		<title>Timestamp Microservice.</title>
 		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	</head>
-
-	<header>
-		<p>Welcome, <span id="display-name"></span>!</p>
-		<a class="menu" href="/profile">Profile</a>
-		<p>|</p>
-		<a class="menu" href="/logout">Logout</a>
-	</header>
 
 	<body>
 		<div class="container">
-			<img src="/public/img/clementine_150.png" />
-			<br />
-			<p class="clementine-text">Clementine.js</p>
+			<h1>API Basejump: Timestamp microservice</h1>
+			<blockquote>
+				User stories:
+				<ul>1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
+				<ul>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
+				<ul>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</ul>
+			</blockquote>
+			<h3>Example usage:</h3>
+			<code>https://timestamp-ws-tilau2328.c9users.io/December%2015,%202015</code><br/>
+			<code>https://timestamp-ws-tilau2328.c9users.io/1450137600</code>
+			<h3>Example output:</h3>
+			<code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
+			<footer class="text-center">
+				<hr>
+				<p>A work by: <a href="https://www.freecodecamp.com/tilau2328" target="_blank">André Stielau</a>.</p>
+			</footer>
 		</div>
-	
-		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
-			</div>
-		</div>
-		
-		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
 	</body>
-
 </html>
